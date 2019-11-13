@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background:ghostwhite;
+}
+
+h1{
+	margin-left: 5vw;
+	margin-top: 24px;
+	-webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000;
+	font-size: 3em;
+	font-family:monospace;
+}
+
+#output{
+	margin-left: 40vw;
+	margin-top: 24px;
+	position: absolute;
+	top:12px;
+	font-family:monospace;
+}
+
+#scorebox{
+	margin-left:5vw;
+	margin-top: 24px;
+	position: absolute;
+	top:200px;
+	font-family:monospace;
+	font-size: 120%;
+}
+
+.battleshipGrid {
+  display: grid;
+  width: 676px;
+  height: 676px;
+  grid-gap: 0px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	background-color: navy;
+  margin: auto;
+  margin-top: 12px;
+}
+
+.square {
+  border: 1px solid black;
+  padding: 0;
+  cursor: crosshair;
+}
+
+.square:hover{
+	border: 1px solid white;
+}

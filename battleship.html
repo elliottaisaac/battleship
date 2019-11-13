@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="art">
+	<head>
+		<meta charset="UTF-8">
+		<title>BATTLESHIP</title>
+		<link href="styles.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+
+		<h1>Battleship!</h1>
+
+		<h2 id="output">Click on a square to guess</h2>
+
+		<div id="scorebox">
+			<h3>Boats sunk: <span id="score"></span></h3>
+			<h4>Shots remaining: <span id="shots">100</span></h4>
+		</div>
+
+		<div class="battleshipGrid">
+					  <div class="square A1" style="grid-row:1/2;grid-column: 1/2;"></div>
+					  <div class="square A2" style="grid-row:1/2;grid-column: 2/3;"></div>
+						<div class="square A3" style="grid-row:1/2;grid-column: 3/4;"></div>
+					 	<div class="square A4" style="grid-row:1/2;grid-column: 4/5;"></div>
+						<div class="square A5" style="grid-row:1/2;grid-column: 5/6;"></div>
+						<div class="square A6" style="grid-row:1/2;grid-column: 6/7;" ></div>
+						<div class="square A7" style="grid-row:1/2;grid-column: 7/8;"></div>
+					  <div class="square A8" style="grid-row:1/2;grid-column: 8/9;"></div>
+						<div class="square A9" style="grid-row:1/2;grid-column: 9/10;"></div>
+					 	<div class="square A10" style="grid-row:1/2;grid-column: 10/11;"></div>
+						<div class="square A11" style="grid-row:1/2;grid-column: 11/12;"></div>
+						<div class="square A12" style="grid-row:1/2;grid-column: 12/13;" ></div>
+						<div class="square A13" style="grid-row:1/2;grid-column: 13/14;"></div>
+					  <div class="square A14" style="grid-row:1/2;grid-column: 14/15;"></div>
+						<div class="square A15" style="grid-row:1/2;grid-column: 15/16;"></div>
+					 	<div class="square A16" style="grid-row:1/2;grid-column: 16/17;"></div>
+						<div class="square A17" style="grid-row:1/2;grid-column: 17/18;"></div>
+						<div class="square A18" style="grid-row:1/2;grid-column: 18/19;" ></div>
+						<div class="square A19" style="grid-row:1/2;grid-column: 19/20;"></div>
+					  <div class="square A20" style="grid-row:1/2;grid-column: 20/21;"></div>
+						<div class="square A21" style="grid-row:1/2;grid-column: 21/22;"></div>
+					 	<div class="square A22" style="grid-row:1/2;grid-column: 22/23;"></div>
+						<div class="square A23" style="grid-row:1/2;grid-column: 23/24;"></div>
+						<div class="square A24" style="grid-row:1/2;grid-column: 24/25;" ></div>
+						<div class="square A25" style="grid-row:1/2;grid-column: 25/26;" ></div>
+						<div class="square A26" style="grid-row:1/2;grid-column: 26/27;" ></div>
+					 <div class="square B1" style="grid-row:2/3;grid-column: 1/2;"></div>
+					 <div class="square B2" style="grid-row:2/3;grid-column: 2/3;"></div>
+					 <div class="square B3" style="grid-row:2/3;grid-column: 3/4;"></div>
+					 <div class="square B4" style="grid-row:2/3;grid-column: 4/5;"></div>
+					 <div class="square B5" style="grid-row:2/3;grid-column: 5/6;"></div>
+					 <div class="square B6" style="grid-row:2/3;grid-column: 6/7;" ></div>
+					 <div class="square B7" style="grid-row:2/3;grid-column: 7/8;"></div>
+					 <div class="square B8" style="grid-row:2/3;grid-column: 8/9;"></div>
+					 <div class="square B9" style="grid-row:2/3;grid-column: 9/10;"></div>
+					 <div class="square B10" style="grid-row:2/3;grid-column: 10/11;"></div>
+					 <div class="square B11" style="grid-row:2/3;grid-column: 11/12;"></div>
+					 <div class="square B12" style="grid-row:2/3;grid-column: 12/13;" ></div>
+					 <div class="square B13" style="grid-row:2/3;grid-column: 13/14;"></div>
+					 <div class="square B14" style="grid-row:2/3;grid-column: 14/15;"></div>
+					 <div class="square B15" style="grid-row:2/3;grid-column: 15/16;"></div>
+					 <div class="square B16" style="grid-row:2/3;grid-column: 16/17;"></div>
+					 <div class="square B17" style="grid-row:2/3;grid-column: 17/18;"></div>
+					 <div class="square B18" style="grid-row:2/3;grid-column: 18/19;" ></div>
+					 <div class="square B19" style="grid-row:2/3;grid-column: 19/20;"></div>
+					 <div class="square B20" style="grid-row:2/3;grid-column: 20/21;"></div>
+					 <div class="square B21" style="grid-row:2/3;grid-column: 21/22;"></div>
+					 <div class="square B22" style="grid-row:2/3;grid-column: 22/23;"></div>
+					 <div class="square B23" style="grid-row:2/3;grid-column: 23/24;"></div>
+					 <div class="square B24" style="grid-row:2/3;grid-column: 24/25;" ></div>
+					 <div class="square B25" style="grid-row:2/3;grid-column: 25/26;" ></div>
+					 <div class="square B26" style="grid-row:2/3;grid-column: 26/27;" ></div>
+					 <div class="square C1" style="grid-row:3/4;grid-column: 1/2;"></div>
+					 <div class="square C2" style="grid-row:3/4;grid-column: 2/3;"></div>
+					 <div class="square C3" style="grid-row:3/4;grid-column: 3/4;"></div>
+					 <div class="square C4" style="grid-row:3/4;grid-column: 4/5;"></div>
+					 <div class="square C5" style="grid-row:3/4;grid-column: 5/6;"></div>
+					 <div class="square C6" style="grid-row:3/4;grid-column: 6/7;" ></div>
+					 <div class="square C7" style="grid-row:3/4;grid-column: 7/8;"></div>
+					 <div class="square C8" style="grid-row:3/4;grid-column: 8/9;"></div>
+					 <div class="square C9" style="grid-row:3/4;grid-column: 9/10;"></div>
+					 <div class="square C10" style="grid-row:3/4;grid-column: 10/11;"></div>
+					 <div class="square C11" style="grid-row:3/4;grid-column: 11/12;"></div>
+					 <div class="square C12" style="grid-row:3/4;grid-column: 12/13;" ></div>
+					 <div class="square C13" style="grid-row:3/4;grid-column: 13/14;"></div>
+					 <div class="square C14" style="grid-row:3/4;grid-column: 14/15;"></div>
+					 <div class="square C15" style="grid-row:3/4;grid-column: 15/16;"></div>
+					 <div class="square C16" style="grid-row:3/4;grid-column: 16/17;"></div>
+					 <div class="square C17" style="grid-row:3/4;grid-column: 17/18;"></div>
+					 <div class="square C18" style="grid-row:3/4;grid-column: 18/19;" ></div>
+					 <div class="square C19" style="grid-row:3/4;grid-column: 19/20;"></div>
+					 <div class="square C20" style="grid-row:3/4;grid-column: 20/21;"></div>
+					 <div class="square C21" style="grid-row:3/4;grid-column: 21/22;"></div>
+					 <div class="square C22" style="grid-row:3/4;grid-column: 22/23;"></div>
+					 <div class="square C23" style="grid-row:3/4;grid-column: 23/24;"></div>
+					 <div class="square C24" style="grid-row:3/4;grid-column: 24/25;" ></div>
+					 <div class="square C25" style="grid-row:3/4;grid-column: 25/26;" ></div>
+					 <div class="square C26" style="grid-row:3/4;grid-column: 26/27;" ></div>
+					<div class="square D1" style="grid-row:4/5;grid-column: 1/2;"></div>
+					<div class="square D2" style="grid-row:4/5;grid-column: 2/3;"></div>
+					<div class="square D3" style="grid-row:4/5;grid-column: 3/4;"></div>
+					<div class="square D4" style="grid-row:4/5;grid-column: 4/5;"></div>
+					<div class="square D5" style="grid-row:4/5;grid-column: 5/6;"></div>
+					<div class="square D6" style="grid-row:4/5;grid-column: 6/7;" ></div>
+					<div class="square D7" style="grid-row:4/5;grid-column: 7/8;"></div>
+					<div class="square D8" style="grid-row:4/5;grid-column: 8/9;"></div>
+					<div class="square D9" style="grid-row:4/5;grid-column: 9/10;"></div>
+					<div class="square D10" style="grid-row:4/5;grid-column: 10/11;"></div>
+					<div class="square D11" style="grid-row:4/5;grid-column: 11/12;"></div>
+					<div class="square D12" style="grid-row:4/5;grid-column: 12/13;" ></div>
+					<div class="square D13" style="grid-row:4/5;grid-column: 13/14;"></div>
+					<div class="square D14" style="grid-row:4/5;grid-column: 14/15;"></div>
+					<div class="square D15" style="grid-row:4/5;grid-column: 15/16;"></div>
+					<div class="square D16" style="grid-row:4/5;grid-column: 16/17;"></div>
+					<div class="square D17" style="grid-row:4/5;grid-column: 17/18;"></div>
+					<div class="square D18" style="grid-row:4/5;grid-column: 18/19;" ></div>
+					<div class="square D19" style="grid-row:4/5;grid-column: 19/20;"></div>
+					<div class="square D20" style="grid-row:4/5;grid-column: 20/21;"></div>
+					<div class="square D21" style="grid-row:4/5;grid-column: 21/22;"></div>
+					<div class="square D22" style="grid-row:4/5;grid-column: 22/23;"></div>
+					<div class="square D23" style="grid-row:4/5;grid-column: 23/24;"></div>
+					<div class="square D24" style="grid-row:4/5;grid-column: 24/25;" ></div>
+					<div class="square D25" style="grid-row:4/5;grid-column: 25/26;" ></div>
+					<div class="square D26" style="grid-row:4/5;grid-column: 26/27;" ></div>
+					<div class="square E1" style="grid-row:5/6;grid-column: 1/2;"></div>
+					<div class="square E2" style="grid-row:5/6;grid-column: 2/3;"></div>
+					<div class="square E3" style="grid-row:5/6;grid-column: 3/4;"></div>
+					<div class="square E4" style="grid-row:5/6;grid-column: 4/5;"></div>
+					<div class="square E5" style="grid-row:5/6;grid-column: 5/6;"></div>
+					<div class="square E6" style="grid-row:5/6;grid-column: 6/7;" ></div>
+					<div class="square E7" style="grid-row:5/6;grid-column: 7/8;"></div>
+					<div class="square E8" style="grid-row:5/6;grid-column: 8/9;"></div>
+					<div class="square E9" style="grid-row:5/6;grid-column: 9/10;"></div>
+					<div class="square E10" style="grid-row:5/6;grid-column: 10/11;"></div>
+					<div class="square E11" style="grid-row:5/6;grid-column: 11/12;"></div>
+					<div class="square E12" style="grid-row:5/6;grid-column: 12/13;" ></div>
+					<div class="square E13" style="grid-row:5/6;grid-column: 13/14;"></div>
+					<div class="square E14" style="grid-row:5/6;grid-column: 14/15;"></div>
+					<div class="square E15" style="grid-row:5/6;grid-column: 15/16;"></div>
+					<div class="square E16" style="grid-row:5/6;grid-column: 16/17;"></div>
+					<div class="square E17" style="grid-row:5/6;grid-column: 17/18;"></div>
+					<div class="square E18" style="grid-row:5/6;grid-column: 18/19;" ></div>
+					<div class="square E19" style="grid-row:5/6;grid-column: 19/20;"></div>
+					<div class="square E20" style="grid-row:5/6;grid-column: 20/21;"></div>
+					<div class="square E21" style="grid-row:5/6;grid-column: 21/22;"></div>
+					<div class="square E22" style="grid-row:5/6;grid-column: 22/23;"></div>
+					<div class="square E23" style="grid-row:5/6;grid-column: 23/24;"></div>
+					<div class="square E24" style="grid-row:5/6;grid-column: 24/25;" ></div>
+					<div class="square E25" style="grid-row:5/6;grid-column: 25/26;" ></div>
+					<div class="square E26" style="grid-row:5/6;grid-column: 26/27;" ></div>
+					<div class="square F1" style="grid-row:6/7;grid-column: 1/2;"></div>
+					<div class="square F2" style="grid-row:6/7;grid-column: 2/3;"></div>
+					<div class="square F3" style="grid-row:6/7;grid-column: 3/4;"></div>
+					<div class="square F4" style="grid-row:6/7;grid-column: 4/5;"></div>
+					<div class="square F5" style="grid-row:6/7;grid-column: 5/6;"></div>
+					<div class="square F6" style="grid-row:6/7;grid-column: 6/7;" ></div>
+					<div class="square F7" style="grid-row:6/7;grid-column: 7/8;"></div>
+					<div class="square F8" style="grid-row:6/7;grid-column: 8/9;"></div>
+					<div class="square F9" style="grid-row:6/7;grid-column: 9/10;"></div>
+					<div class="square F10" style="grid-row:6/7;grid-column: 10/11;"></div>
+					<div class="square F11" style="grid-row:6/7;grid-column: 11/12;"></div>
+					<div class="square F12" style="grid-row:6/7;grid-column: 12/13;" ></div>
+					<div class="square F13" style="grid-row:6/7;grid-column: 13/14;"></div>
+					<div class="square F14" style="grid-row:6/7;grid-column: 14/15;"></div>
+					<div class="square F15" style="grid-row:6/7;grid-column: 15/16;"></div>
+					<div class="square F16" style="grid-row:6/7;grid-column: 16/17;"></div>
+					<div class="square F17" style="grid-row:6/7;grid-column: 17/18;"></div>
+					<div class="square F18" style="grid-row:6/7;grid-column: 18/19;" ></div>
+					<div class="square F19" style="grid-row:6/7;grid-column: 19/20;"></div>
+					<div class="square F20" style="grid-row:6/7;grid-column: 20/21;"></div>
+					<div class="square F21" style="grid-row:6/7;grid-column: 21/22;"></div>
+					<div class="square F22" style="grid-row:6/7;grid-column: 22/23;"></div>
+					<div class="square F23" style="grid-row:6/7;grid-column: 23/24;"></div>
+					<div class="square F24" style="grid-row:6/7;grid-column: 24/25;" ></div>
+					<div class="square F25" style="grid-row:6/7;grid-column: 25/26;" ></div>
+					<div class="square F26" style="grid-row:6/7;grid-column: 26/27;" ></div>
+				 <div class="square G1" style="grid-row:7/8;grid-column: 1/2;"></div>
+				 <div class="square G2" style="grid-row:7/8;grid-column: 2/3;"></div>
+				 <div class="square G3" style="grid-row:7/8;grid-column: 3/4;"></div>
+				 <div class="square G4" style="grid-row:7/8;grid-column: 4/5;"></div>
+				 <div class="square G5" style="grid-row:7/8;grid-column: 5/6;"></div>
+				 <div class="square G6" style="grid-row:7/8;grid-column: 6/7;" ></div>
+				 <div class="square G7" style="grid-row:7/8;grid-column: 7/8;"></div>
+				 <div class="square G8" style="grid-row:7/8;grid-column: 8/9;"></div>
+				 <div class="square G9" style="grid-row:7/8;grid-column: 9/10;"></div>
+				 <div class="square G10" style="grid-row:7/8;grid-column: 10/11;"></div>
+				 <div class="square G11" style="grid-row:7/8;grid-column: 11/12;"></div>
+				 <div class="square G12" style="grid-row:7/8;grid-column: 12/13;" ></div>
+				 <div class="square G13" style="grid-row:7/8;grid-column: 13/14;"></div>
+				 <div class="square G14" style="grid-row:7/8;grid-column: 14/15;"></div>
+				 <div class="square G15" style="grid-row:7/8;grid-column: 15/16;"></div>
+				 <div class="square G16" style="grid-row:7/8;grid-column: 16/17;"></div>
+				 <div class="square G17" style="grid-row:7/8;grid-column: 17/18;"></div>
+				 <div class="square G18" style="grid-row:7/8;grid-column: 18/19;" ></div>
+				 <div class="square G19" style="grid-row:7/8;grid-column: 19/20;"></div>
+				 <div class="square G20" style="grid-row:7/8;grid-column: 20/21;"></div>
+				 <div class="square G21" style="grid-row:7/8;grid-column: 21/22;"></div>
+				 <div class="square G22" style="grid-row:7/8;grid-column: 22/23;"></div>
+				 <div class="square G23" style="grid-row:7/8;grid-column: 23/24;"></div>
+				 <div class="square G24" style="grid-row:7/8;grid-column: 24/25;" ></div>
+				 <div class="square G25" style="grid-row:7/8;grid-column: 25/26;" ></div>
+				 <div class="square G26" style="grid-row:7/8;grid-column: 26/27;" ></div>
+				 <div class="square H1" style="grid-row:8/9;grid-column: 1/2;"></div>
+				 <div class="square H2" style="grid-row:8/9;grid-column: 2/3;"></div>
+				 <div class="square H3" style="grid-row:8/9;grid-column: 3/4;"></div>
+				 <div class="square H4" style="grid-row:8/9;grid-column: 4/5;"></div>
+				 <div class="square H5" style="grid-row:8/9;grid-column: 5/6;"></div>
+				 <div class="square H6" style="grid-row:8/9;grid-column: 6/7;" ></div>
+				 <div class="square H7" style="grid-row:8/9;grid-column: 7/8;"></div>
+				 <div class="square H8" style="grid-row:8/9;grid-column: 8/9;"></div>
+				 <div class="square H9" style="grid-row:8/9;grid-column: 9/10;"></div>
+				 <div class="square H10" style="grid-row:8/9;grid-column: 10/11;"></div>
+				 <div class="square H11" style="grid-row:8/9;grid-column: 11/12;"></div>
+				 <div class="square H12" style="grid-row:8/9;grid-column: 12/13;" ></div>
+				 <div class="square H13" style="grid-row:8/9;grid-column: 13/14;"></div>
+				 <div class="square H14" style="grid-row:8/9;grid-column: 14/15;"></div>
+				 <div class="square H15" style="grid-row:8/9;grid-column: 15/16;"></div>
+				 <div class="square H16" style="grid-row:8/9;grid-column: 16/17;"></div>
+				 <div class="square H17" style="grid-row:8/9;grid-column: 17/18;"></div>
+				 <div class="square H18" style="grid-row:8/9;grid-column: 18/19;" ></div>
+				 <div class="square H19" style="grid-row:8/9;grid-column: 19/20;"></div>
+				 <div class="square H20" style="grid-row:8/9;grid-column: 20/21;"></div>
+				 <div class="square H21" style="grid-row:8/9;grid-column: 21/22;"></div>
+				 <div class="square H22" style="grid-row:8/9;grid-column: 22/23;"></div>
+				 <div class="square H23" style="grid-row:8/9;grid-column: 23/24;"></div>
+				 <div class="square H24" style="grid-row:8/9;grid-column: 24/25;" ></div>
+				 <div class="square H25" style="grid-row:8/9;grid-column: 25/26;" ></div>
+				 <div class="square H26" style="grid-row:8/9;grid-column: 26/27;" ></div>
+				<div class="square I1" style="grid-row:9/10;grid-column: 1/2;"></div>
+				<div class="square I2" style="grid-row:9/10;grid-column: 2/3;"></div>
+				<div class="square I3" style="grid-row:9/10;grid-column: 3/4;"></div>
+				<div class="square I4" style="grid-row:9/10;grid-column: 4/5;"></div>
+				<div class="square I5" style="grid-row:9/10;grid-column: 5/6;"></div>
+				<div class="square I6" style="grid-row:9/10;grid-column: 6/7;" ></div>
+				<div class="square I7" style="grid-row:9/10;grid-column: 7/8;"></div>
+				<div class="square I8" style="grid-row:9/10;grid-column: 8/9;"></div>
+				<div class="square I9" style="grid-row:9/10;grid-column: 9/10;"></div>
+				<div class="square I10" style="grid-row:9/10;grid-column: 10/11;"></div>
+				<div class="square I11" style="grid-row:9/10;grid-column: 11/12;"></div>
+				<div class="square I12" style="grid-row:9/10;grid-column: 12/13;" ></div>
+				<div class="square I13" style="grid-row:9/10;grid-column: 13/14;"></div>
+				<div class="square I14" style="grid-row:9/10;grid-column: 14/15;"></div>
+				<div class="square I15" style="grid-row:9/10;grid-column: 15/16;"></div>
+				<div class="square I16" style="grid-row:9/10;grid-column: 16/17;"></div>
+				<div class="square I17" style="grid-row:9/10;grid-column: 17/18;"></div>
+				<div class="square I18" style="grid-row:9/10;grid-column: 18/19;" ></div>
+				<div class="square I19" style="grid-row:9/10;grid-column: 19/20;"></div>
+				<div class="square I20" style="grid-row:9/10;grid-column: 20/21;"></div>
+				<div class="square I21" style="grid-row:9/10;grid-column: 21/22;"></div>
+				<div class="square I22" style="grid-row:9/10;grid-column: 22/23;"></div>
+				<div class="square I23" style="grid-row:9/10;grid-column: 23/24;"></div>
+				<div class="square I24" style="grid-row:9/10;grid-column: 24/25;" ></div>
+				<div class="square I25" style="grid-row:9/10;grid-column: 25/26;" ></div>
+				<div class="square I26" style="grid-row:9/10;grid-column: 26/27;" ></div>
+				<div class="square J1" style="grid-row:10/11;grid-column: 1/2;"></div>
+				<div class="square J2" style="grid-row:10/11;grid-column: 2/3;"></div>
+				<div class="square J3" style="grid-row:10/11;grid-column: 3/4;"></div>
+				<div class="square J4" style="grid-row:10/11;grid-column: 4/5;"></div>
+				<div class="square J5" style="grid-row:10/11;grid-column: 5/6;"></div>
+				<div class="square J6" style="grid-row:10/11;grid-column: 6/7;" ></div>
+				<div class="square J7" style="grid-row:10/11;grid-column: 7/8;"></div>
+				<div class="square J8" style="grid-row:10/11;grid-column: 8/9;"></div>
+				<div class="square J9" style="grid-row:10/11;grid-column: 9/10;"></div>
+				<div class="square J10" style="grid-row:10/11;grid-column: 10/11;"></div>
+				<div class="square J11" style="grid-row:10/11;grid-column: 11/12;"></div>
+				<div class="square J12" style="grid-row:10/11;grid-column: 12/13;" ></div>
+				<div class="square J13" style="grid-row:10/11;grid-column: 13/14;"></div>
+				<div class="square J14" style="grid-row:10/11;grid-column: 14/15;"></div>
+				<div class="square J15" style="grid-row:10/11;grid-column: 15/16;"></div>
+				<div class="square J16" style="grid-row:10/11;grid-column: 16/17;"></div>
+				<div class="square J17" style="grid-row:10/11;grid-column: 17/18;"></div>
+				<div class="square J18" style="grid-row:10/11;grid-column: 18/19;" ></div>
+				<div class="square J19" style="grid-row:10/11;grid-column: 19/20;"></div>
+				<div class="square J20" style="grid-row:10/11;grid-column: 20/21;"></div>
+				<div class="square J21" style="grid-row:10/11;grid-column: 21/22;"></div>
+				<div class="square J22" style="grid-row:10/11;grid-column: 22/23;"></div>
+				<div class="square J23" style="grid-row:10/11;grid-column: 23/24;"></div>
+				<div class="square J24" style="grid-row:10/11;grid-column: 24/25;" ></div>
+				<div class="square J25" style="grid-row:10/11;grid-column: 25/26;" ></div>
+				<div class="square J26" style="grid-row:10/11;grid-column: 26/27;" ></div>
+				<div class="square K1" style="grid-row:11/12;grid-column: 1/2;"></div>
+				<div class="square K2" style="grid-row:11/12;grid-column: 2/3;"></div>
+				<div class="square K3" style="grid-row:11/12;grid-column: 3/4;"></div>
+				<div class="square K4" style="grid-row:11/12;grid-column: 4/5;"></div>
+				<div class="square K5" style="grid-row:11/12;grid-column: 5/6;"></div>
+				<div class="square K6" style="grid-row:11/12;grid-column: 6/7;" ></div>
+				<div class="square K7" style="grid-row:11/12;grid-column: 7/8;"></div>
+				<div class="square K8" style="grid-row:11/12;grid-column: 8/9;"></div>
+				<div class="square K9" style="grid-row:11/12;grid-column: 9/10;"></div>
+				<div class="square K10" style="grid-row:11/12;grid-column: 10/11;"></div>
+				<div class="square K11" style="grid-row:11/12;grid-column: 11/12;"></div>
+				<div class="square K12" style="grid-row:11/12;grid-column: 12/13;" ></div>
+				<div class="square K13" style="grid-row:11/12;grid-column: 13/14;"></div>
+				<div class="square K14" style="grid-row:11/12;grid-column: 14/15;"></div>
+				<div class="square K15" style="grid-row:11/12;grid-column: 15/16;"></div>
+				<div class="square K16" style="grid-row:11/12;grid-column: 16/17;"></div>
+				<div class="square K17" style="grid-row:11/12;grid-column: 17/18;"></div>
+				<div class="square K18" style="grid-row:11/12;grid-column: 18/19;" ></div>
+				<div class="square K19" style="grid-row:11/12;grid-column: 19/20;"></div>
+				<div class="square K20" style="grid-row:11/12;grid-column: 20/21;"></div>
+				<div class="square K21" style="grid-row:11/12;grid-column: 21/22;"></div>
+				<div class="square K22" style="grid-row:11/12;grid-column: 22/23;"></div>
+				<div class="square K23" style="grid-row:11/12;grid-column: 23/24;"></div>
+				<div class="square K24" style="grid-row:11/12;grid-column: 24/25;" ></div>
+				<div class="square K25" style="grid-row:11/12;grid-column: 25/26;" ></div>
+				<div class="square K26" style="grid-row:11/12;grid-column: 26/27;" ></div>
+			 <div class="square L1" style="grid-row:12/13;grid-column: 1/2;"></div>
+			 <div class="square L2" style="grid-row:12/13;grid-column: 2/3;"></div>
+			 <div class="square L3" style="grid-row:12/13;grid-column: 3/4;"></div>
+			 <div class="square L4" style="grid-row:12/13;grid-column: 4/5;"></div>
+			 <div class="square L5" style="grid-row:12/13;grid-column: 5/6;"></div>
+			 <div class="square L6" style="grid-row:12/13;grid-column: 6/7;" ></div>
+			 <div class="square L7" style="grid-row:12/13;grid-column: 7/8;"></div>
+			 <div class="square L8" style="grid-row:12/13;grid-column: 8/9;"></div>
+			 <div class="square L9" style="grid-row:12/13;grid-column: 9/10;"></div>
+			 <div class="square L10" style="grid-row:12/13;grid-column: 10/11;"></div>
+			 <div class="square L11" style="grid-row:12/13;grid-column: 11/12;"></div>
+			 <div class="square L12" style="grid-row:12/13;grid-column: 12/13;" ></div>
+			 <div class="square L13" style="grid-row:12/13;grid-column: 13/14;"></div>
+			 <div class="square L14" style="grid-row:12/13;grid-column: 14/15;"></div>
+			 <div class="square L15" style="grid-row:12/13;grid-column: 15/16;"></div>
+			 <div class="square L16" style="grid-row:12/13;grid-column: 16/17;"></div>
+			 <div class="square L17" style="grid-row:12/13;grid-column: 17/18;"></div>
+			 <div class="square L18" style="grid-row:12/13;grid-column: 18/19;" ></div>
+			 <div class="square L19" style="grid-row:12/13;grid-column: 19/20;"></div>
+			 <div class="square L20" style="grid-row:12/13;grid-column: 20/21;"></div>
+			 <div class="square L21" style="grid-row:12/13;grid-column: 21/22;"></div>
+			 <div class="square L22" style="grid-row:12/13;grid-column: 22/23;"></div>
+			 <div class="square L23" style="grid-row:12/13;grid-column: 23/24;"></div>
+			 <div class="square L24" style="grid-row:12/13;grid-column: 24/25;" ></div>
+			 <div class="square L25" style="grid-row:12/13;grid-column: 25/26;" ></div>
+			 <div class="square L26" style="grid-row:12/13;grid-column: 26/27;" ></div>
+			 <div class="square M1" style="grid-row:13/14;grid-column: 1/2;"></div>
+			 <div class="square M2" style="grid-row:13/14;grid-column: 2/3;"></div>
+			 <div class="square M3" style="grid-row:13/14;grid-column: 3/4;"></div>
+			 <div class="square M4" style="grid-row:13/14;grid-column: 4/5;"></div>
+			 <div class="square M5" style="grid-row:13/14;grid-column: 5/6;"></div>
+			 <div class="square M6" style="grid-row:13/14;grid-column: 6/7;" ></div>
+			 <div class="square M7" style="grid-row:13/14;grid-column: 7/8;"></div>
+			 <div class="square M8" style="grid-row:13/14;grid-column: 8/9;"></div>
+			 <div class="square M9" style="grid-row:13/14;grid-column: 9/10;"></div>
+			 <div class="square M10" style="grid-row:13/14;grid-column: 10/11;"></div>
+			 <div class="square M11" style="grid-row:13/14;grid-column: 11/12;"></div>
+			 <div class="square M12" style="grid-row:13/14;grid-column: 12/13;" ></div>
+			 <div class="square M13" style="grid-row:13/14;grid-column: 13/14;"></div>
+			 <div class="square M14" style="grid-row:13/14;grid-column: 14/15;"></div>
+			 <div class="square M15" style="grid-row:13/14;grid-column: 15/16;"></div>
+			 <div class="square M16" style="grid-row:13/14;grid-column: 16/17;"></div>
+			 <div class="square M17" style="grid-row:13/14;grid-column: 17/18;"></div>
+			 <div class="square M18" style="grid-row:13/14;grid-column: 18/19;" ></div>
+			 <div class="square M19" style="grid-row:13/14;grid-column: 19/20;"></div>
+			 <div class="square M20" style="grid-row:13/14;grid-column: 20/21;"></div>
+			 <div class="square M21" style="grid-row:13/14;grid-column: 21/22;"></div>
+			 <div class="square M22" style="grid-row:13/14;grid-column: 22/23;"></div>
+			 <div class="square M23" style="grid-row:13/14;grid-column: 23/24;"></div>
+			 <div class="square M24" style="grid-row:13/14;grid-column: 24/25;" ></div>
+			 <div class="square M25" style="grid-row:13/14;grid-column: 25/26;" ></div>
+			 <div class="square M26" style="grid-row:13/14;grid-column: 26/27;" ></div>
+			<div class="square N1" style="grid-row:14/15;grid-column: 1/2;"></div>
+			<div class="square N2" style="grid-row:14/15;grid-column: 2/3;"></div>
+			<div class="square N3" style="grid-row:14/15;grid-column: 3/4;"></div>
+			<div class="square N4" style="grid-row:14/15;grid-column: 4/5;"></div>
+			<div class="square N5" style="grid-row:14/15;grid-column: 5/6;"></div>
+			<div class="square N6" style="grid-row:14/15;grid-column: 6/7;" ></div>
+			<div class="square N7" style="grid-row:14/15;grid-column: 7/8;"></div>
+			<div class="square N8" style="grid-row:14/15;grid-column: 8/9;"></div>
+			<div class="square N9" style="grid-row:14/15;grid-column: 9/10;"></div>
+			<div class="square N10" style="grid-row:14/15;grid-column: 10/11;"></div>
+			<div class="square N11" style="grid-row:14/15;grid-column: 11/12;"></div>
+			<div class="square N12" style="grid-row:14/15;grid-column: 12/13;" ></div>
+			<div class="square N13" style="grid-row:14/15;grid-column: 13/14;"></div>
+			<div class="square N14" style="grid-row:14/15;grid-column: 14/15;"></div>
+			<div class="square N15" style="grid-row:14/15;grid-column: 15/16;"></div>
+			<div class="square N16" style="grid-row:14/15;grid-column: 16/17;"></div>
+			<div class="square N17" style="grid-row:14/15;grid-column: 17/18;"></div>
+			<div class="square N18" style="grid-row:14/15;grid-column: 18/19;" ></div>
+			<div class="square N19" style="grid-row:14/15;grid-column: 19/20;"></div>
+			<div class="square N20" style="grid-row:14/15;grid-column: 20/21;"></div>
+			<div class="square N21" style="grid-row:14/15;grid-column: 21/22;"></div>
+			<div class="square N22" style="grid-row:14/15;grid-column: 22/23;"></div>
+			<div class="square N23" style="grid-row:14/15;grid-column: 23/24;"></div>
+			<div class="square N24" style="grid-row:14/15;grid-column: 24/25;" ></div>
+			<div class="square N25" style="grid-row:14/15;grid-column: 25/26;" ></div>
+			<div class="square N26" style="grid-row:14/15;grid-column: 26/27;" ></div>
+			<div class="square O1" style="grid-row:15/16;grid-column: 1/2;"></div>
+			<div class="square O2" style="grid-row:15/16;grid-column: 2/3;"></div>
+			<div class="square O3" style="grid-row:15/16;grid-column: 3/4;"></div>
+			<div class="square O4" style="grid-row:15/16;grid-column: 4/5;"></div>
+			<div class="square O5" style="grid-row:15/16;grid-column: 5/6;"></div>
+			<div class="square O6" style="grid-row:15/16;grid-column: 6/7;" ></div>
+			<div class="square O7" style="grid-row:15/16;grid-column: 7/8;"></div>
+			<div class="square O8" style="grid-row:15/16;grid-column: 8/9;"></div>
+			<div class="square O9" style="grid-row:15/16;grid-column: 9/10;"></div>
+			<div class="square O10" style="grid-row:15/16;grid-column: 10/11;"></div>
+			<div class="square O11" style="grid-row:15/16;grid-column: 11/12;"></div>
+			<div class="square O12" style="grid-row:15/16;grid-column: 12/13;" ></div>
+			<div class="square O13" style="grid-row:15/16;grid-column: 13/14;"></div>
+			<div class="square O14" style="grid-row:15/16;grid-column: 14/15;"></div>
+			<div class="square O15" style="grid-row:15/16;grid-column: 15/16;"></div>
+			<div class="square O16" style="grid-row:15/16;grid-column: 16/17;"></div>
+			<div class="square O17" style="grid-row:15/16;grid-column: 17/18;"></div>
+			<div class="square O18" style="grid-row:15/16;grid-column: 18/19;" ></div>
+			<div class="square O19" style="grid-row:15/16;grid-column: 19/20;"></div>
+			<div class="square O20" style="grid-row:15/16;grid-column: 20/21;"></div>
+			<div class="square O21" style="grid-row:15/16;grid-column: 21/22;"></div>
+			<div class="square O22" style="grid-row:15/16;grid-column: 22/23;"></div>
+			<div class="square O23" style="grid-row:15/16;grid-column: 23/24;"></div>
+			<div class="square O24" style="grid-row:15/16;grid-column: 24/25;" ></div>
+			<div class="square O25" style="grid-row:15/16;grid-column: 25/26;" ></div>
+			<div class="square O26" style="grid-row:15/16;grid-column: 26/27;" ></div>
+			<div class="square P1" style="grid-row:16/17;grid-column: 1/2;"></div>
+			<div class="square P2" style="grid-row:16/17;grid-column: 2/3;"></div>
+			<div class="square P3" style="grid-row:16/17;grid-column: 3/4;"></div>
+			<div class="square P4" style="grid-row:16/17;grid-column: 4/5;"></div>
+			<div class="square P5" style="grid-row:16/17;grid-column: 5/6;"></div>
+			<div class="square P6" style="grid-row:16/17;grid-column: 6/7;" ></div>
+			<div class="square P7" style="grid-row:16/17;grid-column: 7/8;"></div>
+			<div class="square P8" style="grid-row:16/17;grid-column: 8/9;"></div>
+			<div class="square P9" style="grid-row:16/17;grid-column: 9/10;"></div>
+			<div class="square P10" style="grid-row:16/17;grid-column: 10/11;"></div>
+			<div class="square P11" style="grid-row:16/17;grid-column: 11/12;"></div>
+			<div class="square P12" style="grid-row:16/17;grid-column: 12/13;" ></div>
+			<div class="square P13" style="grid-row:16/17;grid-column: 13/14;"></div>
+			<div class="square P14" style="grid-row:16/17;grid-column: 14/15;"></div>
+			<div class="square P15" style="grid-row:16/17;grid-column: 15/16;"></div>
+			<div class="square P16" style="grid-row:16/17;grid-column: 16/17;"></div>
+			<div class="square P17" style="grid-row:16/17;grid-column: 17/18;"></div>
+			<div class="square P18" style="grid-row:16/17;grid-column: 18/19;" ></div>
+			<div class="square P19" style="grid-row:16/17;grid-column: 19/20;"></div>
+			<div class="square P20" style="grid-row:16/17;grid-column: 20/21;"></div>
+			<div class="square P21" style="grid-row:16/17;grid-column: 21/22;"></div>
+			<div class="square P22" style="grid-row:16/17;grid-column: 22/23;"></div>
+			<div class="square P23" style="grid-row:16/17;grid-column: 23/24;"></div>
+			<div class="square P24" style="grid-row:16/17;grid-column: 24/25;" ></div>
+			<div class="square P25" style="grid-row:16/17;grid-column: 25/26;" ></div>
+			<div class="square P26" style="grid-row:16/17;grid-column: 26/27;" ></div>
+		 <div class="square Q1" style="grid-row:17/18;grid-column: 1/2;"></div>
+		 <div class="square Q2" style="grid-row:17/18;grid-column: 2/3;"></div>
+		 <div class="square Q3" style="grid-row:17/18;grid-column: 3/4;"></div>
+		 <div class="square Q4" style="grid-row:17/18;grid-column: 4/5;"></div>
+		 <div class="square Q5" style="grid-row:17/18;grid-column: 5/6;"></div>
+		 <div class="square Q6" style="grid-row:17/18;grid-column: 6/7;" ></div>
+		 <div class="square Q7" style="grid-row:17/18;grid-column: 7/8;"></div>
+		 <div class="square Q8" style="grid-row:17/18;grid-column: 8/9;"></div>
+		 <div class="square Q9" style="grid-row:17/18;grid-column: 9/10;"></div>
+		 <div class="square Q10" style="grid-row:17/18;grid-column: 10/11;"></div>
+		 <div class="square Q11" style="grid-row:17/18;grid-column: 11/12;"></div>
+		 <div class="square Q12" style="grid-row:17/18;grid-column: 12/13;" ></div>
+		 <div class="square Q13" style="grid-row:17/18;grid-column: 13/14;"></div>
+		 <div class="square Q14" style="grid-row:17/18;grid-column: 14/15;"></div>
+		 <div class="square Q15" style="grid-row:17/18;grid-column: 15/16;"></div>
+		 <div class="square Q16" style="grid-row:17/18;grid-column: 16/17;"></div>
+		 <div class="square Q17" style="grid-row:17/18;grid-column: 17/18;"></div>
+		 <div class="square Q18" style="grid-row:17/18;grid-column: 18/19;" ></div>
+		 <div class="square Q19" style="grid-row:17/18;grid-column: 19/20;"></div>
+		 <div class="square Q20" style="grid-row:17/18;grid-column: 20/21;"></div>
+		 <div class="square Q21" style="grid-row:17/18;grid-column: 21/22;"></div>
+		 <div class="square Q22" style="grid-row:17/18;grid-column: 22/23;"></div>
+		 <div class="square Q23" style="grid-row:17/18;grid-column: 23/24;"></div>
+		 <div class="square Q24" style="grid-row:17/18;grid-column: 24/25;" ></div>
+		 <div class="square Q25" style="grid-row:17/18;grid-column: 25/26;" ></div>
+		 <div class="square Q26" style="grid-row:17/18;grid-column: 26/27;" ></div>
+		 <div class="square R1" style="grid-row:18/19;grid-column: 1/2;"></div>
+		 <div class="square R2" style="grid-row:18/19;grid-column: 2/3;"></div>
+		 <div class="square R3" style="grid-row:18/19;grid-column: 3/4;"></div>
+		 <div class="square R4" style="grid-row:18/19;grid-column: 4/5;"></div>
+		 <div class="square R5" style="grid-row:18/19;grid-column: 5/6;"></div>
+		 <div class="square R6" style="grid-row:18/19;grid-column: 6/7;" ></div>
+		 <div class="square R7" style="grid-row:18/19;grid-column: 7/8;"></div>
+		 <div class="square R8" style="grid-row:18/19;grid-column: 8/9;"></div>
+		 <div class="square R9" style="grid-row:18/19;grid-column: 9/10;"></div>
+		 <div class="square R10" style="grid-row:18/19;grid-column: 10/11;"></div>
+		 <div class="square R11" style="grid-row:18/19;grid-column: 11/12;"></div>
+		 <div class="square R12" style="grid-row:18/19;grid-column: 12/13;" ></div>
+		 <div class="square R13" style="grid-row:18/19;grid-column: 13/14;"></div>
+		 <div class="square R14" style="grid-row:18/19;grid-column: 14/15;"></div>
+		 <div class="square R15" style="grid-row:18/19;grid-column: 15/16;"></div>
+		 <div class="square R16" style="grid-row:18/19;grid-column: 16/17;"></div>
+		 <div class="square R17" style="grid-row:18/19;grid-column: 17/18;"></div>
+		 <div class="square R18" style="grid-row:18/19;grid-column: 18/19;" ></div>
+		 <div class="square R19" style="grid-row:18/19;grid-column: 19/20;"></div>
+		 <div class="square R20" style="grid-row:18/19;grid-column: 20/21;"></div>
+		 <div class="square R21" style="grid-row:18/19;grid-column: 21/22;"></div>
+		 <div class="square R22" style="grid-row:18/19;grid-column: 22/23;"></div>
+		 <div class="square R23" style="grid-row:18/19;grid-column: 23/24;"></div>
+		 <div class="square R24" style="grid-row:18/19;grid-column: 24/25;" ></div>
+		 <div class="square R25" style="grid-row:18/19;grid-column: 25/26;" ></div>
+		 <div class="square R26" style="grid-row:18/19;grid-column: 26/27;" ></div>
+		<div class="square S1" style="grid-row:19/20;grid-column: 1/2;"></div>
+		<div class="square S2" style="grid-row:19/20;grid-column: 2/3;"></div>
+		<div class="square S3" style="grid-row:19/20;grid-column: 3/4;"></div>
+		<div class="square S4" style="grid-row:19/20;grid-column: 4/5;"></div>
+		<div class="square S5" style="grid-row:19/20;grid-column: 5/6;"></div>
+		<div class="square S6" style="grid-row:19/20;grid-column: 6/7;" ></div>
+		<div class="square S7" style="grid-row:19/20;grid-column: 7/8;"></div>
+		<div class="square S8" style="grid-row:19/20;grid-column: 8/9;"></div>
+		<div class="square S9" style="grid-row:19/20;grid-column: 9/10;"></div>
+		<div class="square S10" style="grid-row:19/20;grid-column: 10/11;"></div>
+		<div class="square S11" style="grid-row:19/20;grid-column: 11/12;"></div>
+		<div class="square S12" style="grid-row:19/20;grid-column: 12/13;" ></div>
+		<div class="square S13" style="grid-row:19/20;grid-column: 13/14;"></div>
+		<div class="square S14" style="grid-row:19/20;grid-column: 14/15;"></div>
+		<div class="square S15" style="grid-row:19/20;grid-column: 15/16;"></div>
+		<div class="square S16" style="grid-row:19/20;grid-column: 16/17;"></div>
+		<div class="square S17" style="grid-row:19/20;grid-column: 17/18;"></div>
+		<div class="square S18" style="grid-row:19/20;grid-column: 18/19;" ></div>
+		<div class="square S19" style="grid-row:19/20;grid-column: 19/20;"></div>
+		<div class="square S20" style="grid-row:19/20;grid-column: 20/21;"></div>
+		<div class="square S21" style="grid-row:19/20;grid-column: 21/22;"></div>
+		<div class="square S22" style="grid-row:19/20;grid-column: 22/23;"></div>
+		<div class="square S23" style="grid-row:19/20;grid-column: 23/24;"></div>
+		<div class="square S24" style="grid-row:19/20;grid-column: 24/25;" ></div>
+		<div class="square S25" style="grid-row:19/20;grid-column: 25/26;" ></div>
+		<div class="square S26" style="grid-row:19/20;grid-column: 26/27;" ></div>
+		<div class="square T1" style="grid-row:20/21;grid-column: 1/2;"></div>
+		<div class="square T2" style="grid-row:20/21;grid-column: 2/3;"></div>
+		<div class="square T3" style="grid-row:20/21;grid-column: 3/4;"></div>
+		<div class="square T4" style="grid-row:20/21;grid-column: 4/5;"></div>
+		<div class="square T5" style="grid-row:20/21;grid-column: 5/6;"></div>
+		<div class="square T6" style="grid-row:20/21;grid-column: 6/7;" ></div>
+		<div class="square T7" style="grid-row:20/21;grid-column: 7/8;"></div>
+		<div class="square T8" style="grid-row:20/21;grid-column: 8/9;"></div>
+		<div class="square T9" style="grid-row:20/21;grid-column: 9/10;"></div>
+		<div class="square T10" style="grid-row:20/21;grid-column: 10/11;"></div>
+		<div class="square T11" style="grid-row:20/21;grid-column: 11/12;"></div>
+		<div class="square T12" style="grid-row:20/21;grid-column: 12/13;" ></div>
+		<div class="square T13" style="grid-row:20/21;grid-column: 13/14;"></div>
+		<div class="square T14" style="grid-row:20/21;grid-column: 14/15;"></div>
+		<div class="square T15" style="grid-row:20/21;grid-column: 15/16;"></div>
+		<div class="square T16" style="grid-row:20/21;grid-column: 16/17;"></div>
+		<div class="square T17" style="grid-row:20/21;grid-column: 17/18;"></div>
+		<div class="square T18" style="grid-row:20/21;grid-column: 18/19;" ></div>
+		<div class="square T19" style="grid-row:20/21;grid-column: 19/20;"></div>
+		<div class="square T20" style="grid-row:20/21;grid-column: 20/21;"></div>
+		<div class="square T21" style="grid-row:20/21;grid-column: 21/22;"></div>
+		<div class="square T22" style="grid-row:20/21;grid-column: 22/23;"></div>
+		<div class="square T23" style="grid-row:20/21;grid-column: 23/24;"></div>
+		<div class="square T24" style="grid-row:20/21;grid-column: 24/25;" ></div>
+		<div class="square T25" style="grid-row:20/21;grid-column: 25/26;" ></div>
+		<div class="square T26" style="grid-row:20/21;grid-column: 26/27;" ></div>
+			<div class="square U1" style="grid-row:21/22;grid-column: 1/2;"></div>
+			<div class="square U2" style="grid-row:21/22;grid-column: 2/3;"></div>
+			<div class="square U3" style="grid-row:21/22;grid-column: 3/4;"></div>
+			<div class="square U4" style="grid-row:21/22;grid-column: 4/5;"></div>
+			<div class="square U5" style="grid-row:21/22;grid-column: 5/6;"></div>
+			<div class="square U6" style="grid-row:21/22;grid-column: 6/7;" ></div>
+			<div class="square U7" style="grid-row:21/22;grid-column: 7/8;"></div>
+			<div class="square U8" style="grid-row:21/22;grid-column: 8/9;"></div>
+			<div class="square U9" style="grid-row:21/22;grid-column: 9/10;"></div>
+			<div class="square U10" style="grid-row:21/22;grid-column: 10/11;"></div>
+			<div class="square U11" style="grid-row:21/22;grid-column: 11/12;"></div>
+			<div class="square U12" style="grid-row:21/22;grid-column: 12/13;" ></div>
+			<div class="square U13" style="grid-row:21/22;grid-column: 13/14;"></div>
+			<div class="square U14" style="grid-row:21/22;grid-column: 14/15;"></div>
+			<div class="square U15" style="grid-row:21/22;grid-column: 15/16;"></div>
+			<div class="square U16" style="grid-row:21/22;grid-column: 16/17;"></div>
+			<div class="square U17" style="grid-row:21/22;grid-column: 17/18;"></div>
+			<div class="square U18" style="grid-row:21/22;grid-column: 18/19;" ></div>
+			<div class="square U19" style="grid-row:21/22;grid-column: 19/20;"></div>
+			<div class="square U20" style="grid-row:21/22;grid-column: 20/21;"></div>
+			<div class="square U21" style="grid-row:21/22;grid-column: 21/22;"></div>
+			<div class="square U22" style="grid-row:21/22;grid-column: 22/23;"></div>
+			<div class="square U23" style="grid-row:21/22;grid-column: 23/24;"></div>
+			<div class="square U24" style="grid-row:21/22;grid-column: 24/25;" ></div>
+			<div class="square U25" style="grid-row:21/22;grid-column: 25/26;" ></div>
+			<div class="square U26" style="grid-row:21/22;grid-column: 26/27;" ></div>
+		 <div class="square V1" style="grid-row:22/23;grid-column: 1/2;"></div>
+		 <div class="square V2" style="grid-row:22/23;grid-column: 2/3;"></div>
+		 <div class="square V3" style="grid-row:22/23;grid-column: 3/4;"></div>
+		 <div class="square V4" style="grid-row:22/23;grid-column: 4/5;"></div>
+		 <div class="square V5" style="grid-row:22/23;grid-column: 5/6;"></div>
+		 <div class="square V6" style="grid-row:22/23;grid-column: 6/7;" ></div>
+		 <div class="square V7" style="grid-row:22/23;grid-column: 7/8;"></div>
+		 <div class="square V8" style="grid-row:22/23;grid-column: 8/9;"></div>
+		 <div class="square V9" style="grid-row:22/23;grid-column: 9/10;"></div>
+		 <div class="square V10" style="grid-row:22/23;grid-column: 10/11;"></div>
+		 <div class="square V11" style="grid-row:22/23;grid-column: 11/12;"></div>
+		 <div class="square V12" style="grid-row:22/23;grid-column: 12/13;" ></div>
+		 <div class="square V13" style="grid-row:22/23;grid-column: 13/14;"></div>
+		 <div class="square V14" style="grid-row:22/23;grid-column: 14/15;"></div>
+		 <div class="square V15" style="grid-row:22/23;grid-column: 15/16;"></div>
+		 <div class="square V16" style="grid-row:22/23;grid-column: 16/17;"></div>
+		 <div class="square V17" style="grid-row:22/23;grid-column: 17/18;"></div>
+		 <div class="square V18" style="grid-row:22/23;grid-column: 18/19;" ></div>
+		 <div class="square V19" style="grid-row:22/23;grid-column: 19/20;"></div>
+		 <div class="square V20" style="grid-row:22/23;grid-column: 20/21;"></div>
+		 <div class="square V21" style="grid-row:22/23;grid-column: 21/22;"></div>
+		 <div class="square V22" style="grid-row:22/23;grid-column: 22/23;"></div>
+		 <div class="square V23" style="grid-row:22/23;grid-column: 23/24;"></div>
+		 <div class="square V24" style="grid-row:22/23;grid-column: 24/25;" ></div>
+		 <div class="square V25" style="grid-row:22/23;grid-column: 25/26;" ></div>
+		 <div class="square V26" style="grid-row:22/23;grid-column: 26/27;" ></div>
+		 <div class="square W1" style="grid-row:23/24;grid-column: 1/2;"></div>
+		 <div class="square W2" style="grid-row:23/24;grid-column: 2/3;"></div>
+		 <div class="square W3" style="grid-row:23/24;grid-column: 3/4;"></div>
+		 <div class="square W4" style="grid-row:23/24;grid-column: 4/5;"></div>
+		 <div class="square W5" style="grid-row:23/24;grid-column: 5/6;"></div>
+		 <div class="square W6" style="grid-row:23/24;grid-column: 6/7;" ></div>
+		 <div class="square W7" style="grid-row:23/24;grid-column: 7/8;"></div>
+		 <div class="square W8" style="grid-row:23/24;grid-column: 8/9;"></div>
+		 <div class="square W9" style="grid-row:23/24;grid-column: 9/10;"></div>
+		 <div class="square W10" style="grid-row:23/24;grid-column: 10/11;"></div>
+		 <div class="square W11" style="grid-row:23/24;grid-column: 11/12;"></div>
+		 <div class="square W12" style="grid-row:23/24;grid-column: 12/13;" ></div>
+		 <div class="square W13" style="grid-row:23/24;grid-column: 13/14;"></div>
+		 <div class="square W14" style="grid-row:23/24;grid-column: 14/15;"></div>
+		 <div class="square W15" style="grid-row:23/24;grid-column: 15/16;"></div>
+		 <div class="square W16" style="grid-row:23/24;grid-column: 16/17;"></div>
+		 <div class="square W17" style="grid-row:23/24;grid-column: 17/18;"></div>
+		 <div class="square W18" style="grid-row:23/24;grid-column: 18/19;" ></div>
+		 <div class="square W19" style="grid-row:23/24;grid-column: 19/20;"></div>
+		 <div class="square W20" style="grid-row:23/24;grid-column: 20/21;"></div>
+		 <div class="square W21" style="grid-row:23/24;grid-column: 21/22;"></div>
+		 <div class="square W22" style="grid-row:23/24;grid-column: 22/23;"></div>
+		 <div class="square W23" style="grid-row:23/24;grid-column: 23/24;"></div>
+		 <div class="square W24" style="grid-row:23/24;grid-column: 24/25;"></div>
+		 <div class="square W25" style="grid-row:23/24;grid-column: 25/26;" ></div>
+		 <div class="square W26" style="grid-row:23/24;grid-column: 26/27;" ></div>
+		<div class="square X1" style="grid-row:24/25;grid-column: 1/2;"></div>
+		<div class="square X2" style="grid-row:24/25;grid-column: 2/3;"></div>
+		<div class="square X3" style="grid-row:24/25;grid-column: 3/4;"></div>
+		<div class="square X4" style="grid-row:24/25;grid-column: 4/5;"></div>
+		<div class="square X5" style="grid-row:24/25;grid-column: 5/6;"></div>
+		<div class="square X6" style="grid-row:24/25;grid-column: 6/7;" ></div>
+		<div class="square X7" style="grid-row:24/25;grid-column: 7/8;"></div>
+		<div class="square X8" style="grid-row:24/25;grid-column: 8/9;"></div>
+		<div class="square X9" style="grid-row:24/25;grid-column: 9/10;"></div>
+		<div class="square X10" style="grid-row:24/25;grid-column: 10/11;"></div>
+		<div class="square X11" style="grid-row:24/25;grid-column: 11/12;"></div>
+		<div class="square X12" style="grid-row:24/25;grid-column: 12/13;" ></div>
+		<div class="square X13" style="grid-row:24/25;grid-column: 13/14;"></div>
+		<div class="square X14" style="grid-row:24/25;grid-column: 14/15;"></div>
+		<div class="square X15" style="grid-row:24/25;grid-column: 15/16;"></div>
+		<div class="square X16" style="grid-row:24/25;grid-column: 16/17;"></div>
+		<div class="square X17" style="grid-row:24/25;grid-column: 17/18;"></div>
+		<div class="square X18" style="grid-row:24/25;grid-column: 18/19;" ></div>
+		<div class="square X19" style="grid-row:24/25;grid-column: 19/20;"></div>
+		<div class="square X20" style="grid-row:24/25;grid-column: 20/21;"></div>
+		<div class="square X21" style="grid-row:24/25;grid-column: 21/22;"></div>
+		<div class="square X22" style="grid-row:24/25;grid-column: 22/23;"></div>
+		<div class="square X23" style="grid-row:24/25;grid-column: 23/24;"></div>
+		<div class="square X24" style="grid-row:24/25;grid-column: 24/25;" ></div>
+		<div class="square X25" style="grid-row:24/25;grid-column: 25/26;" ></div>
+		<div class="square X26" style="grid-row:24/25;grid-column: 26/27;" ></div>
+		<div class="square Y1" style="grid-row:25/26;grid-column: 1/2;"></div>
+		<div class="square Y2" style="grid-row:25/26;grid-column: 2/3;"></div>
+		<div class="square Y3" style="grid-row:25/26;grid-column: 3/4;"></div>
+		<div class="square Y4" style="grid-row:25/26;grid-column: 4/5;"></div>
+		<div class="square Y5" style="grid-row:25/26;grid-column: 5/6;"></div>
+		<div class="square Y6" style="grid-row:25/26;grid-column: 6/7;" ></div>
+		<div class="square Y7" style="grid-row:25/26;grid-column: 7/8;"></div>
+		<div class="square Y8" style="grid-row:25/26;grid-column: 8/9;"></div>
+		<div class="square Y9" style="grid-row:25/26;grid-column: 9/10;"></div>
+		<div class="square Y10" style="grid-row:25/26;grid-column: 10/11;"></div>
+		<div class="square Y11" style="grid-row:25/26;grid-column: 11/12;"></div>
+		<div class="square Y12" style="grid-row:25/26;grid-column: 12/13;" ></div>
+		<div class="square Y13" style="grid-row:25/26;grid-column: 13/14;"></div>
+		<div class="square Y14" style="grid-row:25/26;grid-column: 14/15;"></div>
+		<div class="square Y15" style="grid-row:25/26;grid-column: 15/16;"></div>
+		<div class="square Y16" style="grid-row:25/26;grid-column: 16/17;"></div>
+		<div class="square Y17" style="grid-row:25/26;grid-column: 17/18;"></div>
+		<div class="square Y18" style="grid-row:25/26;grid-column: 18/19;" ></div>
+		<div class="square Y19" style="grid-row:25/26;grid-column: 19/20;"></div>
+		<div class="square Y20" style="grid-row:25/26;grid-column: 20/21;"></div>
+		<div class="square Y21" style="grid-row:25/26;grid-column: 21/22;"></div>
+		<div class="square Y22" style="grid-row:25/26;grid-column: 22/23;"></div>
+		<div class="square Y23" style="grid-row:25/26;grid-column: 23/24;"></div>
+		<div class="square Y24" style="grid-row:25/26;grid-column: 24/25;" ></div>
+		<div class="square Y25" style="grid-row:25/26;grid-column: 25/26;" ></div>
+		<div class="square Y26" style="grid-row:25/26;grid-column: 26/27;" ></div>
+		<div class="square Z1" style="grid-row:26/27;grid-column: 1/2;"></div>
+		<div class="square Z2" style="grid-row:26/27;grid-column: 2/3;"></div>
+		<div class="square Z3" style="grid-row:26/27;grid-column: 3/4;"></div>
+		<div class="square Z4" style="grid-row:26/27;grid-column: 4/5;"></div>
+		<div class="square Z5" style="grid-row:26/27;grid-column: 5/6;"></div>
+		<div class="square Z6" style="grid-row:26/27;grid-column: 6/7;" ></div>
+		<div class="square Z7" style="grid-row:26/27;grid-column: 7/8;"></div>
+		<div class="square Z8" style="grid-row:26/27;grid-column: 8/9;"></div>
+		<div class="square Z9" style="grid-row:26/27;grid-column: 9/10;"></div>
+		<div class="square Z10" style="grid-row:26/27;grid-column: 10/11;"></div>
+		<div class="square Z11" style="grid-row:26/27;grid-column: 11/12;"></div>
+		<div class="square Z12" style="grid-row:26/27;grid-column: 12/13;" ></div>
+		<div class="square Z13" style="grid-row:26/27;grid-column: 13/14;"></div>
+		<div class="square Z14" style="grid-row:26/27;grid-column: 14/15;"></div>
+		<div class="square Z15" style="grid-row:26/27;grid-column: 15/16;"></div>
+		<div class="square Z16" style="grid-row:26/27;grid-column: 16/17;"></div>
+		<div class="square Z17" style="grid-row:26/27;grid-column: 17/18;"></div>
+		<div class="square Z18" style="grid-row:26/27;grid-column: 18/19;" ></div>
+		<div class="square Z19" style="grid-row:26/27;grid-column: 19/20;"></div>
+		<div class="square Z20" style="grid-row:26/27;grid-column: 20/21;"></div>
+		<div class="square Z21" style="grid-row:26/27;grid-column: 21/22;"></div>
+		<div class="square Z22" style="grid-row:26/27;grid-column: 22/23;"></div>
+		<div class="square Z23" style="grid-row:26/27;grid-column: 23/24;"></div>
+		<div class="square Z24" style="grid-row:26/27;grid-column: 24/25;" ></div>
+		<div class="square Z25" style="grid-row:26/27;grid-column: 25/26;" ></div>
+		<div class="square Z26" style="grid-row:26/27;grid-column: 26/27;" ></div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
